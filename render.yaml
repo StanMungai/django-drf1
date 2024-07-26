@@ -1,0 +1,12 @@
+name: django_project  # Replace with your project name
+type: web-service
+env: production
+runtime: python
+
+# Replace with your project name
+repo:
+  url: https://github.com/StanMungai/django-drf1.git
+  branch: main
+
+build_command: pip install -r requirements.txt
+start_command: gunicorn config.wsgi:application
